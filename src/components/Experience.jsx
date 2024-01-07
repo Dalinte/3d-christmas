@@ -1,4 +1,5 @@
-import {OrbitControls, Text} from "@react-three/drei";
+import {Environment, OrbitControls, Text} from "@react-three/drei";
+import {ChristmasScene} from "./ChristmasScene.jsx";
 
 export const Experience = () => {
   return (
@@ -8,6 +9,8 @@ export const Experience = () => {
           HAPPY {'\n'} NEW YEAR
           <meshBasicMaterial color={'white'}/>
       </Text>
+      <ChristmasScene/>
+      <Environment preset={"sunset"}/>
     </>
   );
 };
