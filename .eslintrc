@@ -41,6 +41,8 @@
     ],
     "@typescript-eslint/no-explicit-any": "warn",
     "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    // Игнорирование ошибок, которые добавляются в treejs. mesh, group и т.д
+    "react/no-unknown-property": [1, { "ignore": ["position"] }]
   }
 }
