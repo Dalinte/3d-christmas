@@ -36,7 +36,7 @@ export const MainScene = () => {
         anchorY={'bottom'}
       >
         HAPPY {'\n'} NEW YEAR
-        <meshBasicMaterial color={'white'}>
+        <meshBasicMaterial>
           <RenderTexture attach={'map'}>
             <color attach={'background'} args={['#fff']} />
             <Environment preset={'sunset'} />
