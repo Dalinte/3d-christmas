@@ -1,5 +1,5 @@
 import { MathUtils } from 'three';
-import { Environment, Float, RenderTexture, Text } from '@react-three/drei';
+import { Environment, Float, RenderTexture, Text, useFont } from '@react-three/drei';
 import { ChristmasModel } from './ChristmasModel';
 
 export const NewYearText = () => {
@@ -30,3 +30,5 @@ export const NewYearText = () => {
     </Text>
   );
 };
+
+useFont.preload('fonts/Poppins-Black.ttf');
