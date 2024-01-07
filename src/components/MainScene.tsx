@@ -1,7 +1,9 @@
 import {
   CameraControls,
   Environment,
+  Float,
   MeshReflectorMaterial,
+  RenderTexture,
   Text,
 } from '@react-three/drei';
 import type { CameraControls as CameraControlsType } from '@react-three/drei';
@@ -34,7 +36,20 @@ export const MainScene = () => {
         anchorY={'bottom'}
       >
         HAPPY {'\n'} NEW YEAR
-        <meshBasicMaterial color={'white'} />
+        <meshBasicMaterial color={'white'}>
+          <RenderTexture attach={'map'}>
+            <color attach={'background'} args={['#fff']} />
+            <Environment preset={'sunset'} />
+            <Float floatIntensity={4} rotationIntensity={5}>
+              <ChristmasModel
+                scale={5}
+                rotation-y={MathUtils.degToRad(-25)}
+                rotation-x={MathUtils.degToRad(40)}
+                position={[2, -0.5, 0]}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
       </Text>
       <group rotation-y={MathUtils.degToRad(-25)} position-x={3.1}>
         <ChristmasModel scale={1.4} />
