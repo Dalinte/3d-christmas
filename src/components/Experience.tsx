@@ -1,5 +1,5 @@
 import {Environment, OrbitControls, Text} from "@react-three/drei";
-import {ChristmasScene} from "./ChristmasScene.jsx";
+import {ChristmasScene} from "./ChristmasScene";
 
 export const Experience = () => {
   return (
