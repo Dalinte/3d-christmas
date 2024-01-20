@@ -1,7 +1,7 @@
 import { MainScene } from './components/MainScene';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import { OpenLettersButton } from './components/ShowMoreButton';
+import { OpenLettersButton } from './components/OpenLettersButton';
 
 function App() {
   return (
@@ -13,11 +13,7 @@ function App() {
           <MainScene />
         </Suspense>
       </Canvas>
-      <OpenLettersButton
-        onClick={() => {
-          console.log(111);
-        }}
-      />
+      <OpenLettersButton />
     </>
   );
 }

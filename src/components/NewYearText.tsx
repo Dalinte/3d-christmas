@@ -1,6 +1,6 @@
 import { MathUtils } from 'three';
 import { Environment, Float, RenderTexture, Text, useFont } from '@react-three/drei';
-import { ChristmasModel } from './ChristmasModel';
+import { ChristmasModelGenerated } from './ChristmasModel.generated';
 
 export const NewYearText = () => {
   return (
@@ -18,7 +18,7 @@ export const NewYearText = () => {
           <color attach={'background'} args={['#fff']} />
           <Environment preset={'sunset'} />
           <Float floatIntensity={4} rotationIntensity={5}>
-            <ChristmasModel
+            <ChristmasModelGenerated
               scale={5}
               rotation-y={MathUtils.degToRad(-25)}
               rotation-x={MathUtils.degToRad(40)}
